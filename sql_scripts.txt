@@ -1,0 +1,160 @@
+CREATE TABLE Products(
+   ItemID INT NOT NULL AUTO_INCREMENT,
+   ItemName VARCHAR(40) NOT NULL,
+   ItemDesc VARCHAR(100) NOT NULL,
+   ItemCategory VARCHAR(40),
+   PRIMARY KEY ( ItemID  )
+   );
+
+CREATE TABLE SuperMarkets(
+   SupermarketID VARCHAR(40) NOT NULL,
+   SupermarketName VARCHAR(40) NOT NULL,
+   Chain VARCHAR(40),
+   Address VARCHAR(100) NOT NULL,
+   City VARCHAR(40),
+   State VARCHAR(40),
+   PRIMARY KEY ( SupermarketID )
+   );
+
+CREATE TABLE ProductInSupermarket(
+      ItemID INT NOT NULL,
+      SupermarketID VARCHAR(40) NOT NULL,
+      Price FLOAT,
+      CONSTRAINT FOREIGN KEY (ItemID) REFERENCES products (ItemID) ON DELETE CASCADE ON UPDATE CASCADE,
+      CONSTRAINT FOREIGN KEY (SupermarketID) REFERENCES superMarkets (SupermarketID) ON DELETE CASCADE ON UPDATE CASCADE
+      );
+
+
+INSERT INTO products VALUES(101, "Tomatoes", "1kg", "Vegetables");
+INSERT INTO products VALUES(102, "Cucumbers", "1piece", "Vegetables");
+INSERT INTO products VALUES(103, "Carrots", "1kg", "Vegetables");
+INSERT INTO products VALUES(104, "Potatoes", "1kg", "Vegetables");
+INSERT INTO products VALUES(105, "Celery", "1kg", "Vegetables");
+INSERT INTO products VALUES (106, "Broccoli", "1kg", "Vegetables");
+INSERT INTO products VALUES (107, "Beans", "1kg", "Vegetables");
+INSERT INTO products VALUES (108, "Peas", "1kg", "Vegetables");
+INSERT INTO products VALUES (109, "Spinach", "1kg", "Vegetables");
+INSERT INTO products VALUES (110, "Lettuce", "1kg", "Vegetables");
+INSERT INTO products VALUES (111, "Garlic", "1kg", "Vegetables");
+INSERT INTO products VALUES (112, "Brusseles Sprouts", "1kg", "Vegetables");
+INSERT INTO products VALUES (113, "Onions", "1kg", "Vegetables");
+INSERT INTO products VALUES (114, "Asparagus", "1kg", "Vegetables");
+INSERT INTO products VALUES (115, "Pumpkins", "1kg", "Vegetables");
+INSERT INTO products VALUES (116, "Peppers", "1kg", "Vegetables");
+INSERT INTO products VALUES (117, "Green Beans", "1kg", "Vegetables");
+INSERT INTO products VALUES (118, "Snow Peas", "1kg", "Vegetables");
+INSERT INTO products VALUES (119, "Eggplants", "1kg", "Vegetables");
+INSERT INTO products VALUES (120, "Avocado", "1kg", "Vegetables");
+INSERT INTO products VALUES (121, "Apples", "1kg", "Fruits");
+INSERT INTO products VALUES (122, "Oranges", "1kg", "Fruits");
+INSERT INTO products VALUES (123, "Bananas", "1kg", "Fruits");
+INSERT INTO products VALUES (124, "Lemons", "1kg", "Fruits");
+INSERT INTO products VALUES (125, "Limes", "1kg", "Fruits");
+INSERT INTO products VALUES (126, "Grapefruits", "1kg", "Fruits");
+INSERT INTO products VALUES (127, "Grapes", "1kg", "Fruits");
+INSERT INTO products VALUES (128, "Pineapple", "1piece", "Fruits");
+INSERT INTO products VALUES (129, "Figs",  "1kg", "Fruits");
+INSERT INTO products VALUES (130, "Blackberries", "1kg", "Fruits");
+INSERT INTO products VALUES (131, "Rasberries", "1kg", "Fruits");
+INSERT INTO products VALUES (132, "Strawberries", "1kg", "Fruits");
+INSERT INTO products VALUES (133, "Blueberries", "1kg", "Fruits");
+INSERT INTO products VALUES (134, "Cranberries", "1kg", "Fruits");
+INSERT INTO products VALUES (135, "Cherries", "1kg", "Fruits");
+INSERT INTO products VALUES (136, "Appricots", "1kg", "Fruits");
+INSERT INTO products VALUES (137, "Coconut", "1piece", "Fruits");
+INSERT INTO products VALUES (138, "Mangoes", "1kg", "Fruits");
+INSERT INTO products VALUES (139, "Melons", "1kg", "Fruits");
+INSERT INTO products VALUES (140, "Peaches", "1kg", "Fruits");
+INSERT INTO products VALUES (141, "Milk full fat 3%", "1lt", "Dairy");
+INSERT INTO products VALUES (142, "Milk light 2% fat", "1lt", "Dairy");
+INSERT INTO products VALUES (143, "Milk light 1% fat", "1lt", "Dairy");
+INSERT INTO products VALUES (144, "Milk fat-free 0%", "1lt", "Dairy");
+INSERT INTO products VALUES (145, "Milk evaporated", "1lt", "Dairy");
+INSERT INTO products VALUES (146, "Milk powdered", "1lt", "Dairy");
+INSERT INTO products VALUES (147, "Milk chocolate flavor", "1lt", "Dairy");
+INSERT INTO products VALUES (148, "Cheese cheddar", "1lt", "Dairy");
+INSERT INTO products VALUES (149, "Cheese mozzare", "1lt", "Dairy");
+INSERT INTO products VALUES (150, "Cheese swiss", "1lt", "Dairy");
+INSERT INTO products VALUES (151, "Cheese parmesan", "1lt", "Dairy");
+INSERT INTO products VALUES (152, "Cheese cottage", "1lt", "Dairy");
+INSERT INTO products VALUES (153, "Cheese goat", "1lt", "Dairy");
+INSERT INTO products VALUES (154, "Yogurt full fat", "1lt", "Dairy");
+INSERT INTO products VALUES (155, "Yogurt low fat", "1lt", "Dairy");
+INSERT INTO products VALUES (156, "Yogurt fat free", "1lt", "Dairy");
+INSERT INTO products VALUES (157, "Yogurt fruit full fat", "1lt", "Dairy");
+INSERT INTO products VALUES (158, "Yogurt fruit low fat", "1lt", "Dairy");
+INSERT INTO products VALUES (159, "Yogurt fruit fat free", "1lt", "Dairy");
+INSERT INTO products VALUES (160, "Yogurt drinkable", "1lt", "Dairy");
+INSERT INTO products VALUES (161, "Beef neck", "1kg", "Meat");
+INSERT INTO products VALUES (162, "Beef rib steak", "1kg", "Meat");
+INSERT INTO products VALUES (163, "Beef fillet steak", "1kg", "Meat");
+INSERT INTO products VALUES (164, "Beef rump", "1kg", "Meat");
+INSERT INTO products VALUES (165, "Beef shoulder", "1kg", "Meat");
+INSERT INTO products VALUES (166, "Beef thigh", "1kg", "Meat");
+INSERT INTO products VALUES (167, "Beef brisket", "1kg", "Meat");
+INSERT INTO products VALUES (168, "Pork shoulder blade steak", "1kg", "Meat");
+INSERT INTO products VALUES (169, "Pork shoulder arm steak", "1kg", "Meat");
+INSERT INTO products VALUES (170, "Pork loin back ribs", "1kg", "Meat");
+INSERT INTO products VALUES (171, "Pork loin rib chops", "1kg", "Meat");
+INSERT INTO products VALUES (172, "Pork brisket", "1kg", "Meat");
+INSERT INTO products VALUES (173, "Pork leg whole", "1kg", "Meat");
+INSERT INTO products VALUES (174, "Chicken whole", "1kg", "Poultry");
+INSERT INTO products VALUES (175, "Chicken breast", "1kg", "Poultry");
+INSERT INTO products VALUES (176, "Chicken wings", "1kg", "Poultry");
+INSERT INTO products VALUES (177, "Chicken leg whole", "1kg", "Poultry");
+INSERT INTO products VALUES (178, "Chicken drumsticks", "1kg", "Poultry");
+INSERT INTO products VALUES (179, "Chicken giblets", "1kg", "Poultry");
+INSERT INTO products VALUES (180, "Chicken thigh", "1kg", "Poultry");
+INSERT INTO products VALUES (181, "Salmon", "1kg", "Fish");
+INSERT INTO products VALUES (182, "Herring", "1kg", "Fish");
+INSERT INTO products VALUES (183, "Catfish", "1kg", "Fish");
+INSERT INTO products VALUES (184, "Trout", "1kg", "Fish");
+INSERT INTO products VALUES (185, "Swordfish", "1kg", "Fish");
+INSERT INTO products VALUES (186, "Dorado", "1kg", "Fish");
+INSERT INTO products VALUES (187, "Perch", "1kg", "Fish");
+INSERT INTO products VALUES (188, "Sardines", "1kg", "Fish");
+INSERT INTO products VALUES (189, "Tuna", "1kg", "Fish");
+INSERT INTO products VALUES (190, "Mackerel", "1kg", "Fish");
+INSERT INTO products VALUES (191, "Spaggeti long No6", "1kg", "Pasta");
+INSERT INTO products VALUES (192, "Spaggeti long No8", "1kg", "Pasta");
+INSERT INTO products VALUES (193, "Spaggeti long No10", "1kg", "Pasta");
+INSERT INTO products VALUES (194, "Lasagne", "1kg", "Pasta");
+INSERT INTO products VALUES (195, "Papardelle", "1kg", "Pasta");
+INSERT INTO products VALUES (196, "Tagliatelle", "1kg", "Pasta");
+INSERT INTO products VALUES (197, "Penne", "1kg", "Pasta");
+INSERT INTO products VALUES (198, "Tortelini", "1kg", "Pasta");
+INSERT INTO products VALUES (199, "Tortelini beef stuffing", "1kg", "Pasta");
+INSERT INTO products VALUES (200, "Tortelini cheese stuffing", "1kg", "Pasta");
+
+INSERT INTO supermarkets VALUES("10", "MASOUTIS", "Skopou 12", "Thessaloniki", "40 Ekklisies");
+INSERT INTO supermarkets VALUES("11", "MASOUTIS", "K. Kystalli 4", "Thessaloniki", "Center");
+INSERT INTO supermarkets VALUES("12", "MASOUTIS", "Mitr. Kallidoy 112", "Thessaloniki", "Kalamaria");
+INSERT INTO supermarkets VALUES("13", "CARREFOUR", "Perifereiaki odos neas Eykarpias", "Thessaloniki", "Eykarpia");
+INSERT INTO supermarkets VALUES("14", "CARREFOUR", "Emporiki stoa - Tompazi 15", "Thessaloniki", "Pylaia");
+INSERT INTO supermarkets VALUES("15", "CARREFOUR", "Ag. Dimitrioy 186", "Thessaloniki", "Agios Dimitrios");
+INSERT INTO supermarkets VALUES("16", "ARVANITIDIS", "Agathoypoleos 38", "Thessaloniki", "Neapoli");
+INSERT INTO supermarkets VALUES("17", "ARVANTIIDIS", "Aisopoy 9 & Enetikoy", "Thessaloniki", "Center");
+INSERT INTO supermarkets VALUES("19", "ARVANITIDIS", "V. Olgas 141", "Thessaloniki", "Thessaloniki");
+INSERT INTO supermarkets VALUES("20", "AB VASILOPOYLOS", "N. Manoy 4 & Mpotsari", "Thessaloniki", "Mpotsari");
+INSERT INTO supermarkets VALUES("21", "AB VASILOPOYLOS", "Ethn. Antistaseos 18", "Thessaloniki", "Vyzantio");
+INSERT INTO supermarkets VALUES("22", "AB VASILOPOYLOS", "K. Karamanli 44 & Epikoyroy 7", "Thessaloniki", "Kalamaria");
+
+INSERT INTO productinsupermarket VALUES (101, "11", 25);
+INSERT INTO productinsupermarket VALUES (101, "14", 26);
+INSERT INTO productinsupermarket VALUES (101, "18", 24);
+INSERT INTO productinsupermarket VALUES (101, "21", 25);
+INSERT INTO productinsupermarket VALUES (111, "11", 35);
+INSERT INTO productinsupermarket VALUES (111, "14", 36);
+INSERT INTO productinsupermarket VALUES (111, "18", 38);
+INSERT INTO productinsupermarket VALUES (111, "21", 36);
+INSERT INTO productinsupermarket VALUES (121, "11", 16);
+INSERT INTO productinsupermarket VALUES (121, "14", 14);
+INSERT INTO productinsupermarket VALUES (121, "18", 16);
+INSERT INTO productinsupermarket VALUES (121, "21", 39);
+INSERT INTO productinsupermarket VALUES (131, "11", 47);
+INSERT INTO productinsupermarket VALUES (131, "14", 49);
+INSERT INTO productinsupermarket VALUES (131, "18", 50);
+INSERT INTO productinsupermarket VALUES (131, "21", 45);
+
+
+

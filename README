@@ -1,0 +1,24 @@
+Functional specification:
+Our web application will have two types of clients: the customer and the logistic manager of the
+supermarket. The aim of the application is to give information to the customer about the
+supermarket which has the lowest price corresponding to the demanded shopping list of the
+customer. The customer creates a shopping list, the application calculates the sum price of the
+products in each supermarket and orders the supermarkets based on
+that price. In that way the customer is aware of the cheapest place from where to buy the items of his
+shopping list (Optional: If an item from the shopping list of the customer is not available in the
+supermarket, because for instance they do not sell the specific brand of the product, there is a
+proposing list of similar products or inform the customer from where he can buy the product). The
+customer created shopping list are saved in his account for later use. The logistics manager is
+responsible to add/delete/modify the supermarket’s available products. Customer can use the web
+application with or without creating an account, for the logistics manager is mandatory to create an
+account. (Optional: We can provide to the logistics manager some statistics e.g. how many times his
+supermarket win the arbitration, which of their products are more expensive against the
+competition...)
+
+Technological specification:
+Client Framework: JQuery UI
+Server Framework: CodeIgniter
+Client-Server Communication: We will create an API which has some functions that return the data in
+JSON format
+Datastore: MySQL
+Authentication: Using a third-party library (can we use Facebook’s OAUTH library? )
