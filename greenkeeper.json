@@ -1,0 +1,9 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "application/views/js/jquery-ui-1.10.2/jquery-ui-1.10.2/package.json"
+      ]
+    }
+  }
+}
